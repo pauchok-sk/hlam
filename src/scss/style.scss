@@ -15,11 +15,16 @@
 @import "./ui/card";
 @import "./ui/list-tags";
 @import "./ui/breadcrumbs";
+@import "./ui/single-card";
+@import "./ui/title";
 
 // components
 @import "./components/header";
 
 @import "./components/intro";
 @import "./components/s-numbers";
+@import "./components/s-archive-hero";
+@import "./components/s-archive-num";
+@import "./components/s-rec-numbers";
 
 @import "./components/footer";
