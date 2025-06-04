@@ -1,0 +1,99 @@
+.s-numbers {
+  margin-top: 90px;
+  &__item {
+    position: relative;
+    display: block;
+    padding: 50px 0px 16px 0px;
+    transition: color 0.2s ease;
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      border: 3px solid var(--black-l);
+      z-index: -1;
+      transition: border-color 0.2s ease;
+    }
+
+    @include hover {
+      color: var(--primary);
+      &::before {
+        border-color: white;
+      }
+    }
+    @include tablet {
+      padding: 40px 0px;
+    }
+  }
+  &__item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    @include tablet {
+      gap: 12px;
+      row-gap: 16px;
+    }
+  }
+  &__item-num {
+    position: relative;
+    font-size: 88px;
+    line-height: 90px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    flex: 0 1 150px;
+    @include tablet {
+      flex-basis: 95px;
+    }
+
+    span {
+      position: absolute;
+      text-align: start;
+      top: 0;
+      left: 0;
+      line-height: 30px;
+      transform: translateY(-100%);
+      font-size: 30px;
+    }
+  }
+  &__item-info {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    flex: 0 1 710px;
+    margin-left: auto;
+    @include laptop-middle {
+      flex: 1;
+      margin-left: 0;
+    }
+    @include tablet {
+      flex-direction: column;
+      justify-content: space-between;
+
+      gap: 10px;
+    }
+    @include mobile-min {
+      flex: 0 1 235px;
+    }
+  }
+  &__item-title {
+    flex: 1;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 87%;
+    margin: 0;
+    @include tablet {
+      @include overflowText(3);
+    }
+    @include mobile {
+      font-size: 25px;
+    }
+  }
+  &__item-date {
+    flex-shrink: 0;
+  }
+  &__list-tags {
+    align-self: start;
+    @include laptop-min {
+      width: 100%;
+    }
+  }
+}
