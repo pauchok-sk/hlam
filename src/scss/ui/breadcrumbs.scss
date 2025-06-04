@@ -1,0 +1,28 @@
+.breadcrumbs {
+  position: relative;
+  padding: 15px 0px;
+  color: black;
+  background-color: white;
+  border: 3px solid black;
+  border-top: none;
+  font-family: "Andalemono", sans-serif;
+  margin-bottom: 100px;
+  .aioseo-breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .aioseo-breadcrumb {
+    font-size: 14px;
+  }
+  .aioseo-breadcrumb-separator {
+    display: none;
+  }
+
+  a {
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+}

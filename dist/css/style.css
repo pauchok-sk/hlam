@@ -377,6 +377,30 @@ body {
   color: #000;
   transition: opacity .2s ease
 }
+.breadcrumbs {
+  position: relative;
+  padding: 15px 0;
+  color: #000;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-top: none;
+  font-family: Andalemono,sans-serif;
+  margin-bottom: 100px
+}
+.breadcrumbs .aioseo-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px
+}
+.breadcrumbs .aioseo-breadcrumb {
+  font-size: 14px
+}
+.breadcrumbs .aioseo-breadcrumb-separator {
+  display: none
+}
+.breadcrumbs a {
+  transition: opacity .2s ease
+}
 .header {
   position: relative;
   padding: 15px 0;
@@ -606,6 +630,9 @@ body {
   .list-tags a:hover {
     opacity: .7
   }
+  .breadcrumbs a:hover {
+    opacity: .7
+  }
   .header__list a:hover::before {
     right: 0
   }
@@ -630,6 +657,9 @@ body {
     opacity: .7
   }
   .list-tags a:active {
+    opacity: .7
+  }
+  .breadcrumbs a:active {
     opacity: .7
   }
   .header__list a:active::before {
