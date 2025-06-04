@@ -1,0 +1,24 @@
+@import "./fonts/fonts";
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/templates";
+@import "./base/settings";
+@import "./base/media";
+@import "./base/body-config";
+@import "./base/config-container";
+@import "./base/classes";
+
+// ui
+@import "./ui/button";
+@import "./ui/list";
+@import "./ui/dropdown";
+@import "./ui/card";
+@import "./ui/list-tags";
+
+// components
+@import "./components/header";
+
+@import "./components/intro";
+@import "./components/s-numbers";
+
+@import "./components/footer";
