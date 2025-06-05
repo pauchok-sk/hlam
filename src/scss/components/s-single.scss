@@ -1,0 +1,92 @@
+.s-single {
+  margin-bottom: 20px;
+  &__content {
+    h2 {
+      background-color: white;
+      margin: 0;
+      padding: 5px 0;
+
+      font-weight: 400;
+      color: black;
+      font-size: 30px;
+      line-height: 120%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      @include tablet {
+        font-size: 18px;
+        line-height: 200%;
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        &:not(:first-child) {
+          margin-top: 15px;
+        }
+      }
+
+      span {
+        display: block;
+        padding: 0px 190px 0px 445px;
+        margin: 0 auto;
+        max-width: 1405px;
+        @include laptop-middle {
+          padding-left: 300px;
+        }
+        @include laptop-min {
+          padding-left: 20px;
+        }
+        @include tablet {
+          padding: 0 15px;
+        }
+      }
+    }
+    p {
+      padding: 0px 190px 0px 445px;
+      margin: 0 auto;
+      max-width: 1405px;
+
+      font-family: "Andalemono", sans-serif;
+      font-size: 14px;
+      @include laptop-middle {
+        padding-left: 300px;
+      }
+      @include laptop-min {
+        padding: 0 20px;
+      }
+      @include tablet {
+        padding: 0 15px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    blockquote {
+      margin: 25px auto;
+      max-width: 1405px;
+      padding: 0px 40px 0px 445px;
+      @include laptop-middle {
+        padding-left: 300px;
+      }
+      @include laptop-min {
+        padding: 0 20px;
+      }
+
+      p {
+        font-size: 30px;
+        line-height: 90%;
+        font-family: "Wremena", sans-serif;
+        padding: 0px 0px 0px 65px;
+        @include laptop-min {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
