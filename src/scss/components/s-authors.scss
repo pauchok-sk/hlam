@@ -1,0 +1,49 @@
+.s-authors {
+  margin: 20px 0px 60px 0px;
+  @include tablet {
+    margin-bottom: 35px;
+  }
+  &__item {
+    @include laptop-min {
+      padding-bottom: 7px;
+    }
+  }
+  &__item-container {
+    display: flex;
+    gap: 40px;
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 30px;
+      row-gap: 12px;
+    }
+  }
+  &__item-img {
+    width: 315px;
+    height: 155px;
+    object-fit: cover;
+    flex-shrink: 0;
+    @include tablet {
+      width: 380px;
+      height: auto;
+      min-height: 210px;
+      margin: 0 auto;
+    }
+  }
+  &__item-content {
+    font-size: 14px;
+    flex: 1;
+    margin: 0;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__item-list {
+    align-self: center;
+    flex-shrink: 0;
+    @include laptop-min {
+      width: 100%;
+      margin-top: 12px;
+    }
+  }
+}

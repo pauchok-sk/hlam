@@ -1,0 +1,82 @@
+.modal {
+  &._open {
+    .modal__overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal__window {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(175, 255, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    transition: opacity .4s ease, visibility .4s ease;
+  }
+  &__window {
+    background-color: white;
+    width: 1010px;
+    max-width: calc(100% - 30px);
+    border: 1px solid black;
+    color: black;
+    margin-top: 20px;
+    height: fit-content;
+    transform: translateY(30px);
+    opacity: 0;
+
+    transition: opacity .4s ease, transform .4s ease;
+  }
+  &__head {
+    padding: 20px;
+    border: 2px solid black;
+    @include tablet {
+      padding: 15px;
+    }
+  }
+  &__close {
+    width: 11px;
+    height: 11px;
+    color: black;
+    cursor: pointer;
+    margin-left: auto;
+
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/0.63;
+    object-fit: cover;
+  }
+  &__caption {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 107%;
+    min-height: 55px;
+    padding: 7px 20px;
+    border: 2px solid black;
+    @include tablet {
+      padding: 7px 15px;
+    }
+  }
+}

@@ -1,5 +1,10 @@
 .s-single {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  transition: color .4s ease, background-color .4s ease;
+  &._light {
+    background-color: white;
+    color: black;
+  }
   &__content {
     h2 {
       background-color: white;
@@ -10,6 +15,10 @@
       color: black;
       font-size: 30px;
       line-height: 120%;
+
+      &:first-child {
+        border-bottom: 3px solid black;
+      }
 
       &:not(:last-child) {
         margin-bottom: 20px;
@@ -87,6 +96,97 @@
           padding-left: 0;
         }
       }
+    }
+  }
+  &__slider {
+    border-left: 1px solid black;
+    margin: 20px 0px;
+    &::before {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 45px;
+      background-color: white;
+      border: 3px solid black;
+    }
+  }
+  &__slide {
+    margin: 0;
+    width: 825px !important;
+    outline: none !important;
+    cursor: pointer;
+    @include laptop-min {
+      width: 550px !important;
+    }
+    @include tablet-min {
+      width: 100% !important;
+    }
+
+    &:first-child {
+      figcaption {
+        border-left: 3px solid black;
+      }
+    }
+    &:last-child {
+      figcaption {
+        border-right: 3px solid black;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 515px;
+      object-fit: cover;
+      border-right: 1px solid black;
+      @include laptop-min {
+        height: 345px;
+      }
+      @include tablet-min {
+        aspect-ratio: 1/0.63;
+        height: auto;
+      }
+    }
+    figcaption {
+      padding: 12px 20px;
+      background-color: white;
+      color: black;
+      border-top: 3px solid black;
+      border-bottom: 3px solid black;
+
+      font-size: 14px;
+      line-height: 107%;
+      @include tablet-min {
+        padding: 5px 15px;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+      }
+    }
+  }
+  &__slider-btn {
+    @include flex-center;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.8;
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    &._prev {
+      left: 5px;
+    }
+    &._next {
+      right: 5px;
     }
   }
 }
