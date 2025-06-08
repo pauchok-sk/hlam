@@ -1,0 +1,49 @@
+.s-archive {
+  margin: 16px 0px 60px 0px;
+  @include tablet {
+    margin-bottom: 35px;
+  }
+  &__form {
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+  }
+  &__form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  &__form-input {
+    display: none;
+    &:checked + label {
+      background-color: var(--primary);
+      svg {
+        display: block;
+      }
+    }
+  }
+  &__form-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 9px;
+    background-color: white;
+    border-radius: 12px;
+    width: fit-content;
+    min-height: 21px;
+
+    color: black;
+    font-size: 9px;
+    text-transform: uppercase;
+    transition: color .2s ease, background-color .2s ease;
+
+    svg {
+      display: none;
+      width: 11px;
+      height: 11px;
+    }
+  }
+  &__grid {
+    margin-top: 20px;
+  }
+}

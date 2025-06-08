@@ -59,6 +59,9 @@
     @include laptop-min {
       margin-top: 15px;
     }
+    @include tablet {
+      margin-top: 0;
+    }
 
     a {
       transition: color 0.2s ease;

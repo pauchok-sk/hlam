@@ -233,6 +233,12 @@ body {
 .static {
   position: static!important
 }
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 24px;
+  row-gap: 58px
+}
 .btn {
   cursor: pointer;
   background-color: rgba(0,0,0,0);
@@ -397,6 +403,16 @@ body {
   border: 3px solid #000;
   border-top: none;
   font-family: Andalemono,sans-serif
+}
+.breadcrumbs::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: -3px;
+  height: 3px;
+  background-color: #000;
+  z-index: 10
 }
 .breadcrumbs .aioseo-breadcrumbs {
   display: flex;
@@ -1005,6 +1021,52 @@ body {
   margin: 0 auto;
   width: 888px
 }
+.s-archive {
+  margin: 16px 0 60px 0
+}
+.s-archive__form {
+  padding-bottom: 10px;
+  border-bottom: 3px solid #fff
+}
+.s-archive__form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px
+}
+.s-archive__form-input {
+  display: none
+}
+.s-archive__form-input:checked+label {
+  background-color: var(--primary)
+}
+.s-archive__form-input:checked+label svg {
+  display: block
+}
+.s-archive__form-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 9px;
+  background-color: #fff;
+  border-radius: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-height: 21px;
+  color: #000;
+  font-size: 9px;
+  text-transform: uppercase;
+  transition: color .2s ease,background-color .2s ease
+}
+.s-archive__form-label svg {
+  display: none;
+  width: 11px;
+  height: 11px
+}
+.s-archive__grid {
+  margin-top: 20px
+}
 .footer {
   padding: 20px 0 35px 0
 }
@@ -1057,6 +1119,9 @@ body {
   }
 }
 @media (max-width:1199px) {
+  .grid-layout {
+    grid-template-columns: repeat(3,1fr)
+  }
   .s-numbers__item-info {
     flex: 1;
     margin-left: 0
@@ -1169,6 +1234,11 @@ body {
   .container {
     padding: 0 14px
   }
+  .grid-layout {
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    row-gap: 35px
+  }
   .modal__head {
     padding: 15px
   }
@@ -1221,6 +1291,9 @@ body {
   }
   .s-archive-hero__item-title {
     font-size: 30px
+  }
+  .s-archive-hero__content {
+    margin-top: 0
   }
   .s-archive-num__grid {
     margin-bottom: 35px;
@@ -1284,6 +1357,9 @@ body {
     padding: 10px 0;
     border-top: none
   }
+  .s-archive {
+    margin-bottom: 35px
+  }
   .footer__top {
     grid-template-columns: repeat(1,1fr)
   }
@@ -1299,6 +1375,9 @@ body {
   }
 }
 @media (max-width:575px) {
+  .grid-layout {
+    grid-template-columns: repeat(1,1fr)
+  }
   .s-title__content {
     overflow: hidden;
     white-space: nowrap;
