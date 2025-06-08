@@ -35,7 +35,12 @@
     color: black;
     font-size: 9px;
     text-transform: uppercase;
-    transition: color .2s ease, background-color .2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      background-color: var(--primary);
+    }
 
     svg {
       display: none;

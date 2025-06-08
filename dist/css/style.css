@@ -299,7 +299,8 @@ body {
 }
 .card__head {
   padding: 15px;
-  border-bottom: 3px solid #fff
+  border-bottom: 3px solid #fff;
+  margin-bottom: 10px
 }
 .card__type {
   font-size: 14px;
@@ -310,7 +311,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 12px 12px
+  padding: 0 12px 12px 12px
 }
 .card__title {
   display: block;
@@ -831,6 +832,7 @@ body {
 }
 .s-single-head__img {
   display: block;
+  align-self: flex-start;
   width: 315px;
   height: 155px;
   -o-object-fit: cover;
@@ -1443,6 +1445,9 @@ body {
   .s-single__slider-btn:hover {
     opacity: .8
   }
+  .s-archive__form-label:hover {
+    background-color: var(--primary)
+  }
   .footer__item a:hover {
     color: var(--primary)
   }
@@ -1480,6 +1485,9 @@ body {
   }
   .s-single__slider-btn:active {
     opacity: .8
+  }
+  .s-archive__form-label:active {
+    background-color: var(--primary)
   }
   .footer__item a:active {
     color: var(--primary)
