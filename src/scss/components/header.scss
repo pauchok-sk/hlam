@@ -9,6 +9,10 @@
   @include tablet {
     padding: 10px 0px;
   }
+  @include mobile {
+    border-left: none;
+    border-right: none;
+  }
   &__container {
     @include flex-between;
     gap: 30px;

@@ -1433,6 +1433,10 @@ body {
   }
 }
 @media (max-width:479px) {
+  .header {
+    border-left: none;
+    border-right: none
+  }
   .s-numbers__item-title {
     font-size: 25px
   }
