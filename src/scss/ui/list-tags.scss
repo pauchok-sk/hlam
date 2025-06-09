@@ -30,6 +30,12 @@
     text-transform: uppercase;
     color: black;
     transition: opacity 0.2s ease;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     @include hover {
       opacity: 0.7;
     }

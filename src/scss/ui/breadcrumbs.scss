@@ -7,6 +7,11 @@
   border-bottom-width: 2px;
   border-top: none;
   font-family: "Andalemono", sans-serif;
+  @include mobile {
+    border-left: none;
+    border-right: none;
+  }
+
   &::before {
     position: absolute;
     content: "";
