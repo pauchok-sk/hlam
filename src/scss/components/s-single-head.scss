@@ -1,6 +1,18 @@
 .s-single-head {
   &__title {
+    position: relative;
     border-top: none;
+    border-bottom: none !important;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: -2px;
+      height: 2px;
+      background-color: black;
+      z-index: 10;
+    }
   }
   &__switch {
     position: relative;
@@ -14,7 +26,8 @@
 
     &._active {
       &::before {
-        border-color: black;
+        border-color: var(--primary);
+        border-width: 1px;
         background-color: black;
         right: 20px;
       }

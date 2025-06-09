@@ -21,6 +21,12 @@
       min-height: 200px;
     }
   }
+  &__info {
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
   &__title {
     display: block;
     font-size: 30px;

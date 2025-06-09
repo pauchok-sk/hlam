@@ -39,9 +39,9 @@ export default function initSingleSliders() {
       const swiper = new Swiper(block, {
         speed: 800,
         slidesPerView: "auto",
-        autoplay: {
-          delay: 3000,
-        },
+        // autoplay: {
+        //   delay: 3000,
+        // },
         navigation: {
           prevEl: block.querySelector(".s-single__slider-btn._prev"),
           nextEl: block.querySelector(".s-single__slider-btn._next"),

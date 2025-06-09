@@ -22,6 +22,10 @@
     margin-top: 10px;
     padding-bottom: 15px;
     border-bottom: 3px solid white;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--primary);
+    }
   }
   &__title {
     font-weight: 400;
