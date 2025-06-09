@@ -2,11 +2,10 @@ export default function footerSize() {
   function getIOSBottomMenuHeight() {
     if (!window.visualViewport) return 0;
 
+    console.log(window.visualViewport)
+
     const viewport = window.visualViewport;
     const initialHeight = viewport.height;
-
-    // Прокручиваем вниз, чтобы меню скрылось
-    window.scrollTo(0, document.body.scrollHeight);
 
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -21,6 +20,6 @@ export default function footerSize() {
 
   // Использование
   getIOSBottomMenuHeight().then((height) => {
-    alert("Высота нижнего меню Safari:", `${height}`);
+    alert(`Высота нижнего меню Safari: ${height}`);
   });
 }

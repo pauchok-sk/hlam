@@ -30,9 +30,9 @@
     function footerSize() {
         function getIOSBottomMenuHeight() {
             if (!window.visualViewport) return 0;
+            console.log(window.visualViewport);
             const viewport = window.visualViewport;
             const initialHeight = viewport.height;
-            window.scrollTo(0, document.body.scrollHeight);
             return new Promise((resolve => {
                 setTimeout((() => {
                     const newHeight = viewport.height;
@@ -43,7 +43,7 @@
             }));
         }
         getIOSBottomMenuHeight().then((height => {
-            alert("Высота нижнего меню Safari:", `${height}`);
+            alert(`Высота нижнего меню Safari: ${height}`);
         }));
     }
     function initSingleSliders() {
