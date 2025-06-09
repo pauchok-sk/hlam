@@ -1,6 +1,7 @@
 import "../scss/style.scss";
 import dropdown from "./files/dropdown.js";
 import editSingle from "./files/editSingle.js";
+import footerSize from "./files/footerSize.js";
 import initSingleSliders from "./files/initSingleSliders.js";
 import modalImages from "./files/modalImages.js";
 import spoller from "./files/spoller.js";
@@ -12,3 +13,4 @@ switchTheme();
 editSingle();
 initSingleSliders();
 modalImages();
+footerSize();

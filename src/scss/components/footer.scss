@@ -1,8 +1,5 @@
 .footer {
   padding: 20px 0px 35px 0px;
-  @include mobile {
-    padding-bottom: 75px;
-  }
   &__top {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

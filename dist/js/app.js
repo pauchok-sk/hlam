@@ -27,6 +27,25 @@
             title.appendChild(span);
         }));
     }
+    function footerSize() {
+        function getIOSBottomMenuHeight() {
+            if (!window.visualViewport) return 0;
+            const viewport = window.visualViewport;
+            const initialHeight = viewport.height;
+            window.scrollTo(0, document.body.scrollHeight);
+            return new Promise((resolve => {
+                setTimeout((() => {
+                    const newHeight = viewport.height;
+                    window.scrollTo(0, 0);
+                    const bottomMenuHeight = initialHeight - newHeight;
+                    resolve(bottomMenuHeight > 0 ? bottomMenuHeight : 0);
+                }), 300);
+            }));
+        }
+        getIOSBottomMenuHeight().then((height => {
+            alert("Высота нижнего меню Safari:", `${height}`);
+        }));
+    }
     function initSingleSliders() {
         const blocks = document.querySelectorAll(".wp-block-gallery");
         if (blocks.length) blocks.forEach((block => {
@@ -306,4 +325,5 @@
     editSingle();
     initSingleSliders();
     modalImages();
+    footerSize();
 })();
