@@ -29,13 +29,13 @@
     }
     function footerSize() {
         function getIOSBottomMenuHeight() {
-            if (!window.visualViewport) return 0;
-            console.log(window.visualViewport);
-            const viewport = window.visualViewport;
-            const initialHeight = viewport.height;
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+            if (!isIOS) return new Promise((resolve => resolve(0)));
+            const initialHeight = window.innerHeight;
+            window.scrollTo(0, document.body.scrollHeight);
             return new Promise((resolve => {
                 setTimeout((() => {
-                    const newHeight = viewport.height;
+                    const newHeight = window.innerHeight;
                     window.scrollTo(0, 0);
                     const bottomMenuHeight = initialHeight - newHeight;
                     resolve(bottomMenuHeight > 0 ? bottomMenuHeight : 0);
