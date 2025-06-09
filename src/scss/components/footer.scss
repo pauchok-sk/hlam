@@ -1,5 +1,6 @@
 .footer {
   padding: 20px 0px 35px 0px;
+  padding-bottom: calc(35px + env(safe-area-inset-bottom));
   &__top {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

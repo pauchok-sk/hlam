@@ -1093,7 +1093,8 @@ body {
   margin-top: 20px
 }
 .footer {
-  padding: 20px 0 35px 0
+  padding: 20px 0 35px 0;
+  padding-bottom: calc(35px + env(safe-area-inset-bottom))
 }
 .footer__top {
   display: grid;
@@ -1185,7 +1186,7 @@ body {
     display: none
   }
   .header__logo {
-    top: 35px
+    top: 38px
   }
   .header__burger-drop {
     display: block
@@ -1285,6 +1286,10 @@ body {
   }
   .s-numbers__item {
     padding: 40px 0
+  }
+  .s-numbers__item::before {
+    border-left: none;
+    border-right: none
   }
   .s-numbers__item-container {
     gap: 12px;
