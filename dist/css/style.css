@@ -1455,6 +1455,9 @@ body {
     border-left: none!important;
     border-right: none!important
   }
+  .footer .container {
+    padding-bottom: 40px!important
+  }
 }
 @media (max-width:399px) {
   .s-numbers__item-info {

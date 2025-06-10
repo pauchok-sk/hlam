@@ -27,25 +27,6 @@
             title.appendChild(span);
         }));
     }
-    function footerSize() {
-        function getIOSBottomMenuHeight() {
-            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
-            if (!isIOS) return new Promise((resolve => resolve(0)));
-            const initialHeight = window.innerHeight;
-            window.scrollTo(0, document.body.scrollHeight);
-            return new Promise((resolve => {
-                setTimeout((() => {
-                    const newHeight = window.innerHeight;
-                    window.scrollTo(0, 0);
-                    const bottomMenuHeight = initialHeight - newHeight;
-                    resolve(bottomMenuHeight > 0 ? bottomMenuHeight : 0);
-                }), 300);
-            }));
-        }
-        getIOSBottomMenuHeight().then((height => {
-            alert(`Высота нижнего меню Safari: ${height}`);
-        }));
-    }
     function initSingleSliders() {
         const blocks = document.querySelectorAll(".wp-block-gallery");
         if (blocks.length) blocks.forEach((block => {
@@ -325,5 +306,4 @@
     editSingle();
     initSingleSliders();
     modalImages();
-    footerSize();
 })();
