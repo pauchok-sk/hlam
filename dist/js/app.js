@@ -27,6 +27,7 @@
             title.appendChild(span);
         }));
     }
+    function footerResize() {}
     function initSingleSliders() {
         const blocks = document.querySelectorAll(".wp-block-gallery");
         if (blocks.length) blocks.forEach((block => {
@@ -306,4 +307,5 @@
     editSingle();
     initSingleSliders();
     modalImages();
+    footerResize();
 })();
